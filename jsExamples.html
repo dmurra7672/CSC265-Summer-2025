@@ -67,6 +67,15 @@
         <button onclick="changeColor()">Change Color</button>
         <div id="colorBox"></div>
     </section>
+
+    <section class="example">
+        <h2>Ex. 3 Simple Calculator</h2>
+        <p>Perform a quick addition:</p>
+        <input type="number" id="num1" placeholder="Number 1"> +
+        <input type="number" id="num2" placeholder="Number 2">
+        <button onclick="calculateSum()">=</button>
+        <span id="sumResult"></span>
+    </section>
     
     <script>
         // Greeting Generator
@@ -78,11 +87,21 @@
     
         // Random Color Generator
         function changeColor() {
-            const colors = ["red", "orange", "gold", "black", "darkred"];
+            const colors = ["red", "orange", "gold", "black", "white", "darkred"];
             const random = colors[Math.floor(Math.random() * colors.length)];
             document.getElementById("colorBox").style.backgroundColor = random;
         }
 
+        // Simple Calculator
+        function calculateSum() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            if (!isNaN(num1) && !isNaN(num2)) {
+                document.getElementById("sumResult").innerText = num1 + num2;
+            } else {
+                document.getElementById("sumResult").innerText = "Enter valid numbers!";
+            }
+        }
 
 
         </script>
