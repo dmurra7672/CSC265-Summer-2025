@@ -21,7 +21,25 @@
         </ul>
     </nav>
 
+    <section class="example">
+        <h2>Examaple 1 Greeting Generator</h2>
+        <p>Enter your name to see a personalized greeting.</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="sayHello()">Greet Me</button>
+        <p id="greeting"></p>
+    </section>
 
+    <script>
+        // Greeting Generator
+        function sayHello() {
+            const name = document.getElementById("nameInput").value;
+            document.getElementById("greeting").innerText = 
+                name ? `Hello, ${name}! Welcome to my portfolio.` : "Please enter your name!";
+        }
     
+        </script>
+    
+
+
 </body>
 </html>
