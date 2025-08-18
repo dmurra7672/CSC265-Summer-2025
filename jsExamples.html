@@ -12,7 +12,8 @@
     <header>
         <h1>🔥 JavaScript Examples 🔥</h1>
         <p>Portfolio of interactive projects by DeWayne T. Murray</p>
-        style>
+        
+        <style>
         .example {
             margin: 20px auto;
             padding: 20px;
@@ -53,7 +54,7 @@
     </nav>
 
     <section class="example">
-        <h2>Examaple 1 Greeting Generator</h2>
+        <h2>Ex.1 Greeting Generator</h2>
         <p>Enter your name to see a personalized greeting.</p>
         <input type="text" id="nameInput" placeholder="Enter your name">
         <button onclick="sayHello()">Greet Me</button>
@@ -61,7 +62,7 @@
     </section>
 
     <section class="example">
-        <h2>2️⃣ Random Background Color</h2>
+        <h2>Ex. 2 Random Background Color</h2>
         <p>Click the button to change the box color.</p>
         <button onclick="changeColor()">Change Color</button>
         <div id="colorBox"></div>
@@ -75,6 +76,15 @@
                 name ? `Hello, ${name}! Welcome to my portfolio.` : "Please enter your name!";
         }
     
+        // Random Color Generator
+        function changeColor() {
+            const colors = ["red", "orange", "gold", "black", "darkred"];
+            const random = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById("colorBox").style.backgroundColor = random;
+        }
+
+
+
         </script>
     
 
