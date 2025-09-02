@@ -62,6 +62,21 @@
             <div id="clock" class="fire-glow"></div>
         </div>
   
+        <div class="content-box">
+
+            <h2>Ex 2. To-Do List</h2>
+
+            <input type="text" id="taskInput" placeholder="Enter a task">
+
+            <button onclick="addTask()">Add Task</button>
+
+            <ul id="taskList"></ul>
+
+        </div>
+
+
+
+    </section>  
     
 
     <Br></Br>
@@ -81,7 +96,21 @@
         setInterval(updateClock, 1000);
         updateClock();
 
+        // Example 2: To-Do List
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            const taskText = input.value.trim();
+            if (taskText === "") return;
 
+            const li = document.createElement("li");
+            li.textContent = taskText;
+            
+            // click to remove
+            li.onclick = () => li.remove();
+
+            document.getElementById('taskList').appendChild(li);
+            input.value = "";
+        }
 
     </script>
     
