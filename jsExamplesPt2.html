@@ -55,7 +55,7 @@
     </nav>
 
     <section id="examples">
-        <!-- Example 1: Digital Clock -->
+       
         <div class="content-box">
             <h2>Ex. 1 Digital Clock</h2>
             <p>Current Time:</p>
@@ -75,6 +75,13 @@
         </div>
 
 
+        <div class="content-box">
+            <h2>Ex. 3 Number Guessing Game</h2>
+            <p>Guess a number between 1 and 10:</p>
+            <input type="number" id="guessInput" min="1" max="10">
+            <button onclick="checkGuess()">Submit</button>
+            <p id="guessResult"></p>
+        </div>
 
     </section>  
     
@@ -110,6 +117,24 @@
 
             document.getElementById('taskList').appendChild(li);
             input.value = "";
+        }
+
+        // Example 3: Number Guessing Game
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess() {
+            const guess = parseInt(document.getElementById("guessInput").value);
+            const result = document.getElementById("guessResult");
+
+            if (isNaN(guess)) {
+                result.textContent = "❌ Please enter a valid number!";
+            } else if (guess === randomNumber) {
+                result.textContent = "✅ Correct! You guessed the number!";
+            } else if (guess < randomNumber) {
+                result.textContent = "⬆ Too low! Try again.";
+            } else {
+                result.textContent = "⬇ Too high! Try again.";
+            }
         }
 
     </script>
