@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples - DeWayne T. Murray</title>
+    <link rel="stylesheet" href="index-styles.css">
+    <style>
+        .example {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid gold;
+            border-radius: 12px;
+            max-width: 600px;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: orange;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background: red;
+            color: white;
+        }
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+            border: 3px solid gold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <h1>🔥 JavaScript Examples 🔥</h1>
+        <p> JavaScript Portfolio by DeWayne T. Murray</p>
+        
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jsExamples.html">JavaScript Examples</a></li>
+        </ul>
+    </nav>
+
+    <section class="example">
+        <h2>Ex.1 Greeting Generator</h2>
+        <p>Enter your name to see a personalized greeting.</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="sayHello()">Greet Me</button>
+        <p id="greeting"></p>
+    </section>
+
+    <section class="example">
+        <h2>Ex. 2 Random Background Color</h2>
+        <p>Click the button to change the box color.</p>
+        <button onclick="changeColor()">Change Color</button>
+        <div id="colorBox"></div>
+    </section>
+
+    <section class="example">
+        <h2>Ex. 3 Simple Calculator</h2>
+        <p>Perform a quick addition:</p>
+        <input type="number" id="num1" placeholder="Number 1"> +
+        <input type="number" id="num2" placeholder="Number 2">
+        <button onclick="calculateSum()">=</button>
+        <span id="sumResult"></span>
+    </section>
+
+    <Br></Br>
+    
+    <footer>
+        <p>© 2025 DeWayne T. Murray | <a href="tel:5028517575">Call or Text: 502-851-7575</a> | 
+        <a href="mailto:dmurra7672@my.sullivan.edu">Email Me</a> | 
+        <a href="https://www.linkedin.com/in/dewayne-m-04b892352" target="_blank">LinkedIn</a></p>
+    </footer>
+    
+    <script>
+        // Greeting Generator
+        function sayHello() {
+            const name = document.getElementById("nameInput").value;
+            document.getElementById("greeting").innerText = 
+                name ? `Hello, ${name}! Welcome to my portfolio.` : "Please enter your name!";
+        }
+    
+        // Random Color Generator
+        function changeColor() {
+            const colors = ["red", "orange", "gold", "black", "white", "darkred"];
+            const random = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById("colorBox").style.backgroundColor = random;
+        }
+
+        // Simple Calculator
+        function calculateSum() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            if (!isNaN(num1) && !isNaN(num2)) {
+                document.getElementById("sumResult").innerText = num1 + num2;
+            } else {
+                document.getElementById("sumResult").innerText = "Enter valid numbers!";
+            }
+        }
+
+
+        </script>
+    
+
+
+</body>
+</html>
