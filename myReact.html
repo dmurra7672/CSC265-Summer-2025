@@ -39,7 +39,11 @@
         }
       </style>  
 
-
+ <!-- React + ReactDOM via CDN -->
+ <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+ <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+ <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
 
 
 <body>
@@ -60,7 +64,8 @@
     </nav>
   
   
-  
+    <!-- React root element -->
+    <div id="reactRoot"></div>
 
     <!-- Footer -->
     <footer class="mt-5 py-3">
