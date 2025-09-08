@@ -72,7 +72,22 @@
     </footer>
 
 
+ <!-- React components -->
+ <script type="text/babel">
+    // Ex 1: Simple Counter Component
+    function Counter() {
+      const [count, setCount] = React.useState(0);
 
+      return (
+        <div className="react-component">
+          <h2>🔥 Counter Component 🔥</h2>
+          <p>Current Count: {count}</p>
+          <button className="btn-fire" onClick={() => setCount(count + 1)}>Increase</button>
+          <button className="btn-fire ms-2" onClick={() => setCount(count - 1)}>Decrease</button>
+          <button className="btn-fire ms-2" onClick={() => setCount(0)}>Reset</button>
+        </div>
+      );
+    }
 
 
 
