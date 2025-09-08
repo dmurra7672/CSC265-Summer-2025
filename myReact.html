@@ -138,6 +138,19 @@
       );
     }
 
+      // Render all components
+      function App() {
+      return (
+        <div>
+          <Counter />
+          <ColorBox />
+          <TaskList />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('reactRoot')).render(<App />);
+  </script>
 
 </body>
 </html>
