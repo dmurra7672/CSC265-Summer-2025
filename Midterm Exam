@@ -36,28 +36,21 @@
 <body>
 
 
-    <section id="content">
+    <section id="Score">
        
      
         <div class="content-box">
-            <h2>📝 Projects</h2>
-            <ul>
-                <li><a href="#">Midterm Exam</a></li>
-                <li><a href="#">Final Exam</a></li>
-            </ul>
+              
+            <h1>Summer 2025 Midterm</h1>
+    
+            <p>Below You will find my score for my Multiple Choice Midterm. </p>
+            <button id="toggleScore">Reveal Score </button> 
         </div>
 
      
     </section>
 
     
-    <section id="Goals">
-         
-        <h1><button id="toggleGoals">🌟 Goals🌟 </button> </h1>
-    
-        <p>My goal is to innovate, inspire, and eventually lead at the highest level of public service. I am dedicated to developing strong technical expertise, leadership skills, and a following to help shape my future in Web Development.</p>
-        
-    </section>
 
 
     <footer>
