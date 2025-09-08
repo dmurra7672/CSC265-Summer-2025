@@ -109,7 +109,34 @@
       );
     }
 
+ // Example 3: Simple Task List Component
+ function TaskList() {
+      const [tasks, setTasks] = React.useState([]);
+      const [input, setInput] = React.useState('');
 
+      const addTask = () => {
+        if (input.trim() === '') return;
+        setTasks([...tasks, input]);
+        setInput('');
+      };
+
+      const removeTask = (index) => {
+        setTasks(tasks.filter((_, i) => i !== index));
+      };
+
+      return (
+        <div className="react-component">
+          <h2>📝 Task List</h2>
+          <input type="text" value={input} onChange={e => setInput(e.target.value)} placeholder="Enter task" className="form-control mb-2"/>
+          <button className="btn-fire mb-2" onClick={addTask}>Add Task</button>
+          <ul className="list-unstyled">
+            {tasks.map((task, index) => (
+              <li key={index} onClick={() => removeTask(index)} style={{cursor: 'pointer', margin: '5px 0'}}>{task}</li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
 
 
 </body>
