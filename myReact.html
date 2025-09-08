@@ -89,7 +89,25 @@
       );
     }
 
+    
+ // Example 2: Simple Color Box Component
+ function ColorBox() {
+      const [color, setColor] = React.useState('orange');
+      const colors = ['orange', 'red', 'gold', 'yellow'];
 
+      const randomColor = () => {
+        const newColor = colors[Math.floor(Math.random() * colors.length)];
+        setColor(newColor);
+      };
+
+      return (
+        <div className="react-component">
+          <h2>🎨 Random Color Box</h2>
+          <div style={{width: '200px', height: '200px', margin: '10px auto', backgroundColor: color, border: '3px solid gold'}}></div>
+          <button className="btn-fire" onClick={randomColor}>Change Color</button>
+        </div>
+      );
+    }
 
 
 
